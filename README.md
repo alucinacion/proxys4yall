@@ -4,18 +4,6 @@
 
 ---
 
-## 📋 Contenido
-
-1. [Descripción](#descripción)
-2. [Cómo usar](#cómo-usar)
-3. [Formato de la lista](#formato-de-la-lista)
-4. [Actualización automática](#actualización-automática)
-5. [Contribuciones](#contribuciones)
-6. [Historial de cambios](#historial-de-cambios)
-7. [Licencia](#licencia)
-8. [Contacto](#contacto)
-
----
 
 ## 📝 Descripción
 
