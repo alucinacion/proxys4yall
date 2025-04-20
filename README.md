@@ -1,58 +1,57 @@
 # proxys4yall
 
-¡Bienvenido al repositorio **proxys4yall**! Este proyecto mantiene una lista pública de proxys HTTP(S) y SOCKS5 que se renueva automáticamente en GitHub. Úsalo para pruebas, desarrollo u otras herramientas de red.
+Welcome to the **proxys4yall** repository! This project maintains a public list of HTTP(S) and SOCKS5 proxies that are automatically refreshed on GitHub. Use it for testing, development, or other networking tools.
 
 ---
 
+## 📝 Description
 
-## 📝 Descripción
-
-El repositorio **proxys4yall** contiene una colección de proxys públicos (HTTP, HTTPS y SOCKS5) que se validan y renuevan cada cierto tiempo. El objetivo es ofrecer una fuente centralizada y siempre actualizada para desarrolladores, testers y entusiastas de la seguridad.
+The **proxys4yall** repository contains a collection of public proxies (HTTP, HTTPS, and SOCKS5) that are validated and updated periodically. The goal is to provide a centralized, always up-to-date source for developers, testers, and security enthusiasts.
 
 ---
 
-## 📂 Cómo usar
+## 📂 How to Use
 
-1. **Clona el repositorio**:
+1. **Clone the repository**:
    ```bash
    git clone https://github.com/alucinacion/proxys4yall.git
    cd proxys4yall
    ```
 
-2. **Descarga la lista raw**:
+2. **Download the raw list**:
    ```bash
    curl -s https://raw.githubusercontent.com/alucinacion/proxys4yall/main/proxys.txt -o proxys.txt
    ```
 
-3. **Integrar en tu script**:
+3. **Integrate into your script**:
    ```bash
-   # Ejemplo en Bash
+   # Bash example
    while read proxy; do
      curl -x "$proxy" https://example.com
    done < proxys.txt
    ```
 
-4. **Filtrar por tipo** (HTTP, HTTPS, SOCKS5):
+4. **Filter by type** (HTTP, HTTPS, SOCKS5):
    ```bash
-   grep "^HTTP" proxys.txt     # Sólo proxys HTTP
-   grep "SOCKS5" proxys.txt    # Sólo proxys SOCKS5
+   grep "^HTTP" proxys.txt     # HTTP proxies only
+   grep "SOCKS5" proxys.txt    # SOCKS5 proxies only
    ```
 
 ---
 
-## 🔧 Formato de la lista
+## 🔧 List Format
 
-Cada línea de `proxys.txt` sigue el formato:
+Each line in `proxys.txt` follows the format:
 
 ```
-<TIPO>://<IP>:<PUERTO>
+<TYPE>://<IP>:<PORT>
 ```
 
-- **TIPO**: HTTP, HTTPS o SOCKS5
-- **IP**: Dirección IPv4 o IPv6
-- **PUERTO**: Puerto de conexión
+- **TYPE**: HTTP, HTTPS, or SOCKS5
+- **IP**: IPv4 or IPv6 address
+- **PORT**: Connection port
 
-**Ejemplo**:
+**Example**:
 ```
 HTTP://203.0.113.45:8080
 HTTPS://198.51.100.23:443
@@ -61,38 +60,37 @@ SOCKS5://192.0.2.10:1080
 
 ---
 
-## ⏱️ Actualización automática
+## ⏱️ Automatic Updates
 
-La lista se renueva cada 6 horas mediante un **GitHub Actions** que:
+The list is refreshed every 6 hours via a **GitHub Actions** workflow that:
 
-1. Descarga proxies desde varias fuentes públicas.
-2. Valida la disponibilidad de cada proxy.
-3. Genera un nuevo archivo `proxys.txt`.
-4. Abre un pull request automático si hay cambios.
-5. Fusiona el PR tras pasar las comprobaciones.
+1. Downloads proxies from various public sources.
+2. Validates the availability of each proxy.
+3. Generates a new `proxys.txt` file.
+4. Opens an automatic pull request if changes are detected.
+5. Merges the PR after checks pass.
 
-Revisa el flujo de trabajo en `.github/workflows/update.yml`.
-
----
-
-## 🤝 Contribuciones
-
-¡Las contribuciones son bienvenidas! Puedes:
-
-- **Reportar** proxys que fallen o enlaces rotos (abre un issue).
-- **Sugerir** nuevas fuentes de proxys en un issue.
-- **Enviar PR** con mejoras en el script o filtros.
-
-Al enviar un PR, asegúrate de:
-
-- Seguir el formato de `proxys.txt`.
-- Añadir tu nombre y perfil si realizas contribuciones significativas.
+Check the workflow in `.github/workflows/update.yml`.
 
 ---
 
+## 🤝 Contributing
 
-## 📬 Contacto
+Contributions are welcome! You can:
 
-- **Autor**: alucinacion ([@alucinacion](https://github.com/alucinacion))
+- **Report** proxies that fail or broken links (open an issue).
+- **Suggest** new proxy sources in an issue.
+- **Submit a PR** with improvements to the script or filters.
 
-¡Gracias por usar **proxys4yall**! 🚀
+When submitting a PR, make sure to:
+
+- Follow the `proxys.txt` format.
+- Add your name and profile if you make significant contributions.
+
+---
+
+## 📬 Contact
+
+- **Author**: alucinacion ([@alucinacion](https://github.com/alucinacion))
+
+Thank you for using **proxys4yall**! 🚀
